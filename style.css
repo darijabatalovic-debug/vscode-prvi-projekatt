@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-width: 300px;
+    background-color: #0b1020;
+    color: #ffffff;
+}
+
+.meni {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(7, 10, 20, 0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+}
+
+.meni ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meni ul li a {
+    display: block;
+    padding: 18px 28px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.meni ul li a:hover,
+.meni ul li a.aktivno {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #7dd3fc;
+}
+
+.hero {
+    min-height: 480px;
+    padding-top: 80px;
+    background-image:
+        linear-gradient(rgba(4, 8, 20, 0.65), rgba(4, 8, 20, 0.92)),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.manji-hero {
+    min-height: 360px;
+}
+
+.hero-overlay {
+    max-width: 850px;
+    padding: 20px;
+}
+
+.hero-top {
+    color: #7dd3fc;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.hero-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dbe4f0;
+}
+
+.glavni-sadrzaj {
+    width: min(1280px, 92%);
+    margin: 0 auto;
+    padding: 45px 0 60px 0;
+}
+
+.sekcija {
+    margin-bottom: 55px;
+}
+
+.naslov-sekcije {
+    margin-bottom: 22px;
+}
+
+.naslov-sekcije h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.naslov-sekcije span {
+    color: #9fb0c5;
+    font-size: 15px;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.film {
+    width: 200px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.film:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+}
+
+.film img {
+    width: 200px;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    background-color: #111827;
+}
+
+.film-info {
+    padding: 12px 10px 14px 10px;
+    text-align: center;
+}
+
+.film-info h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.film-info p {
+    font-size: 14px;
+}
+
+.trenutno {
+    background-color: white;
+    color: #111827;
+}
+
+.uskoro {
+    background-color: powderblue;
+    color: #111827;
+}
+
+.nije-u-ponudi {
+    background-color: gray;
+    color: white;
+}
+
+.raspored-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+}
+
+.raspored-kartica {
+    background: linear-gradient(180deg, #172036, #101827);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.raspored-kartica h3 {
+    font-size: 28px;
+    color: #7dd3fc;
+    margin-bottom: 12px;
+}
+
+.raspored-kartica p {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.raspored-kartica span {
+    color: #b8c4d6;
+    font-size: 14px;
+}
+
+.info-sale {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.info-kartica {
+    background: linear-gradient(180deg, #172036, #101827);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.info-kartica h3 {
+    color: #7dd3fc;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.info-kartica p {
+    color: #d7dfeb;
+    line-height: 1.6;
+}
+
+.platno {
+    width: 100%;
+    max-width: 700px;
+    margin: 10px auto 30px auto;
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #e2e8f0, #ffffff, #e2e8f0);
+    color: #111827;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.sjedista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.red {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.oznaka-reda {
+    width: 24px;
+    font-weight: bold;
+    color: #7dd3fc;
+}
+
+.sjediste {
+    width: 34px;
+    height: 28px;
+    border-radius: 8px 8px 5px 5px;
+}
+
+.slobodno {
+    background-color: #22c55e;
+}
+
+.zauzeto {
+    background-color: #ef4444;
+}
+
+.vip {
+    background-color: #f59e0b;
+}
+
+.legenda {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    color: #d7dfeb;
+}
+
+.legenda-box {
+    display: inline-block;
+    width: 22px;
+    height: 16px;
+    border-radius: 5px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+    .meni ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .meni ul li a {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero {
+        padding-top: 170px;
+        min-height: 430px;
+    }
+
+    .manji-hero {
+        min-height: 320px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .film-grid {
+        grid-template-columns: repeat(3, 200px);
+    }
+}
+
+@media (max-width: 680px) {
+    .film-grid {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .red {
+        gap: 6px;
+    }
+
+    .sjediste {
+        width: 28px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .film-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .red {
+        flex-wrap: wrap;
+    }
+}
