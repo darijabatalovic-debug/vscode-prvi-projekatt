@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-width: 300px;
+    background-color: #0b1020;
+    color: #ffffff;
+}
+
+.meni {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(7, 10, 20, 0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+}
+
+.meni ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meni ul li a {
+    display: block;
+    padding: 18px 28px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.meni ul li a:hover,
+.meni ul li a.aktivno {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #7dd3fc;
+}
+
+.hero {
+    min-height: 340px;
+    padding-top: 90px;
+    background-image:
+        linear-gradient(rgba(4, 8, 20, 0.65), rgba(4, 8, 20, 0.92)),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    max-width: 850px;
+    padding: 20px;
+}
+
+.hero-top {
+    color: #7dd3fc;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.hero-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #dbe4f0;
+}
+
+.glavni-sadrzaj {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 40px 0 60px 0;
+}
+
+.sekcija {
+    margin-bottom: 50px;
+}
+
+.naslov-sekcije {
+    margin-bottom: 20px;
+}
+
+.naslov-sekcije h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.naslov-sekcije span {
+    color: #9fb0c5;
+    font-size: 15px;
+}
+
+.info-projekcija {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.info-kartica {
+    background: linear-gradient(180deg, #172036, #101827);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.info-kartica h3 {
+    color: #7dd3fc;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.info-kartica p {
+    color: #d7dfeb;
+    font-size: 17px;
+}
+
+.platno {
+    width: 100%;
+    max-width: 760px;
+    margin: 10px auto 30px auto;
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #e2e8f0, #ffffff, #e2e8f0);
+    color: #111827;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.sjedista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.red {
+    display: grid;
+    grid-template-columns: 30px repeat(10, 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+.oznaka-reda {
+    font-weight: bold;
+    color: #7dd3fc;
+    text-align: center;
+}
+
+.sjediste {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    min-height: 28px;
+    border-radius: 6px;
+}
+
+.slobodno {
+    background-color: green;
+}
+
+.zauzeto {
+    background-color: red;
+}
+
+.rezervisano {
+    background-color: gray;
+}
+
+.legenda {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    color: #d7dfeb;
+}
+
+.legenda-box {
+    display: inline-block;
+    width: 22px;
+    height: 16px;
+    border-radius: 5px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+    .meni ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .meni ul li a {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero {
+        padding-top: 170px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .red {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .glavni-sadrzaj {
+        width: 95%;
+    }
+
+    .sjedista {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .red {
+        min-width: 520px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+}

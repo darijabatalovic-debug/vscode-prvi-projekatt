@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, sans-serif;
     min-width: 300px;
@@ -204,101 +200,6 @@ body {
     font-size: 14px;
 }
 
-.info-sale {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
-    margin-bottom: 30px;
-}
-
-.info-kartica {
-    background: linear-gradient(180deg, #172036, #101827);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 24px;
-}
-
-.info-kartica h3 {
-    color: #7dd3fc;
-    margin-bottom: 12px;
-    font-size: 22px;
-}
-
-.info-kartica p {
-    color: #d7dfeb;
-    line-height: 1.6;
-}
-
-.platno {
-    width: 100%;
-    max-width: 700px;
-    margin: 10px auto 30px auto;
-    text-align: center;
-    padding: 16px;
-    border-radius: 12px;
-    background: linear-gradient(90deg, #e2e8f0, #ffffff, #e2e8f0);
-    color: #111827;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.sjedista {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-.red {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.oznaka-reda {
-    width: 24px;
-    font-weight: bold;
-    color: #7dd3fc;
-}
-
-.sjediste {
-    width: 34px;
-    height: 28px;
-    border-radius: 8px 8px 5px 5px;
-}
-
-.slobodno {
-    background-color: #22c55e;
-}
-
-.zauzeto {
-    background-color: #ef4444;
-}
-
-.vip {
-    background-color: #f59e0b;
-}
-
-.legenda {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    flex-wrap: wrap;
-    margin-top: 28px;
-    color: #d7dfeb;
-}
-
-.legenda-box {
-    display: inline-block;
-    width: 22px;
-    height: 16px;
-    border-radius: 5px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
 @media (max-width: 800px) {
     .meni ul {
         flex-direction: column;
@@ -332,15 +233,6 @@ body {
     .film-grid {
         grid-template-columns: repeat(2, 200px);
     }
-
-    .red {
-        gap: 6px;
-    }
-
-    .sjediste {
-        width: 28px;
-        height: 24px;
-    }
 }
 
 @media (max-width: 500px) {
@@ -355,9 +247,5 @@ body {
     .film-grid {
         grid-template-columns: 1fr;
         justify-items: center;
-    }
-
-    .red {
-        flex-wrap: wrap;
     }
 }
